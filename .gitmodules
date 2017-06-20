@@ -1,0 +1,3 @@
+[submodule "python-xlib"]
+	path = python-xlib
+	url = git@github.com:chftyrol/python-xlib.git
