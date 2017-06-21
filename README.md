@@ -3,6 +3,18 @@
 
 This is a very basic python script that retrieves and formats information about the system and sets the resulting string as the `WM_NAME` of the root window of X. In dwm this has the effect to set the status bar text.
 
+### Appearance
+This is how the status bar looks. Bear in mind that font and colors are specified by dwm, not by this program.
+
+
+![bar screenshot](https://raw.githubusercontent.com/chftyrol/dwm-pytus/master/screenshots/bar.png)
+
+
+![clean screenshot](https://raw.githubusercontent.com/chftyrol/dwm-pytus/master/screenshots/clean.png)
+
+
+The icons are Unicode symbols and to display them you will need a font that supports them, such as [this](https://aur.archlinux.org/packages/ttf-font-icons/).
+
 ### System Information
 At the moment the script displays the current information:
 
