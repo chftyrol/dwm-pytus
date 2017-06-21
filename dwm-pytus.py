@@ -316,10 +316,19 @@ class Formatter:
             deltadays = delta.days
             manymins, secs = divmod(deltasecs, 60)
             hours, mins = divmod(manymins, 60)
+            hoursstr = str(hours)
+            minsstr = str(mins)
+            secsstr = str(secs)
+            if len(hoursstr) == 1 :
+                hoursstr = '0' + hoursstr
+            if len(minsstr) == 1 :
+                minsstr = '0' + minsstr
+            if len(secsstr) == 1 :
+                secsstr = '0' + secsstr
             if deltadays > 0 :
-                uptime = str(deltadays) + 'days, ' + str(hours) + ":" + str(mins)
+                uptime = str(deltadays) + 'days, ' + hoursstr + ":" + minsstr
             else :
-                uptime = str(hours) + ":" + str(mins)
+                uptime = hoursstr + ":" + minsstr
             res = self.icons['uptime'] + ' ' + uptime
         except AssertionError :
             if self.omitonerror:
