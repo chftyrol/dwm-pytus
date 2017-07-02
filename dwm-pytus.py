@@ -264,7 +264,7 @@ class Formatter:
                     icon = self.icons['fullbat']
                 elif self.batbounds['fullbat'] >= charge and charge > self.batbounds['almostfullbat']:
                     icon = self.icons['almostfullbat']
-                elif self.batbounds['almostfullbat'] >= charge and charge < self.batbounds['halfbat']:
+                elif self.batbounds['almostfullbat'] >= charge and charge > self.batbounds['halfbat']:
                     icon = self.icons['halfbat']
                 elif self.batbounds['halfbat'] >= charge and charge > self.batbounds['lowbat']:
                     icon = self.icons['lowbat']
