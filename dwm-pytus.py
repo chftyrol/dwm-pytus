@@ -331,7 +331,7 @@ class Formatter:
                     daystr = 'day'
                 else :
                     daystr = 'days'
-                uptime = str(deltadays) + daystr + ', ' + hoursstr + ":" + minsstr
+                uptime = str(deltadays) + " " + daystr + ', ' + hoursstr + ":" + minsstr
             else :
                 uptime = hoursstr + ":" + minsstr
             res = self.icons['uptime'] + ' ' + uptime
