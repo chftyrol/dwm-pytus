@@ -326,7 +326,12 @@ class Formatter:
             if len(secsstr) == 1 :
                 secsstr = '0' + secsstr
             if deltadays > 0 :
-                uptime = str(deltadays) + 'days, ' + hoursstr + ":" + minsstr
+                daystr = ""
+                if deltadays == 1:
+                    daystr = 'day'
+                else :
+                    daystr = 'days'
+                uptime = str(deltadays) + daystr + ', ' + hoursstr + ":" + minsstr
             else :
                 uptime = hoursstr + ":" + minsstr
             res = self.icons['uptime'] + ' ' + uptime
@@ -390,6 +395,12 @@ class Formatter:
         res = ""
         separator = '  '
         for it in self.order:
+            # Check if the formatted status for each unit is empty
+            # If it is, skip it (it means no valid data could be retrieved).
+            if not items[it]:
+                if debug:
+                    print("Skipping unit " + it)
+                continue
             res += separator + items[it]
         res = res.strip()
         return res
